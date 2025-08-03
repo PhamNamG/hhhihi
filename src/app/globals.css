@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.main_content {
+  background-color: #333;
+}
+
+@layer base {
+  :root {
+    /* Name: custom color palette
+       Author: Ilias Ism
+       URL: https://gradient.page */
+
+    /* CSS: .bg-gradient { background: var(--gradient) } */
+    --gradient: #091e3a;
+    --background: 228 98.65% 98.26%;
+    --foreground: 228 7.3% 0.52%;
+
+    --muted: 228 7.3% 91.3%;
+    --muted-foreground: 228 3.65% 41.3%;
+
+    --popover: 228 31.6% 91.3%;
+    --popover-foreground: 228 7.3% 0.65%;
+
+    --card: 228 31.6% 91.3%;
+    --card-foreground: 228 7.3% 0.65%;
+
+    --border: 228 12.3% 89.52%;
+    --input: 228 12.3% 89.52%;
+
+    --primary: 228 73% 13%;
+    --primary-foreground: 228 1.46% 91.3%;
+
+    --secondary: 228 3.65% 95.65%;
+    --secondary-foreground: 228 5.38% 11.3%;
+
+    --accent: 228 3.65% 95.65%;
+    --accent-foreground: 228 5.38% 11.3%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --ring: 228 73% 13%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
+.scroll-containers-comment {
+  max-height: 40rem;
+  overflow-y: auto;
+  background-color: #1a202c;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.scroll-containers-comment::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-containers-comment::-webkit-scrollbar-thumb {
+  background-color: #4a5568;
+  /* Màu sắc của thanh cuộn */
+  border-radius: 9999px;
+  /* Bo tròn thanh cuộn */
+}
+
+.scroll-containers-comment::-webkit-scrollbar-track {
+  background-color: #2d3748;
+  /* Màu nền của thanh cuộn */
+}
+
+@layer base {
+  :root {
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+.flex-container {
+  display: flex;
+  gap: 16px;
+  /* Khoảng cách giữa các cột */
+  align-items: flex-start;
+  /* Căn chỉnh các item ở đầu */
+  padding: 16px;
+  /* Khoảng cách tổng thể */
+}
+
+.flex-container .column {
+  border-radius: 8px;
+  /* Bo góc mềm mại */
+  background-color: #f9f9f9;
+  /* Màu nền sáng nhẹ */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Đổ bóng nhẹ */
+  padding: 16px;
+}
+
+.flex-container .left-column {
+  width: 25%;
+  /* Cột trái chiếm 1/4 */
+}
+
+.flex-container .right-column {
+  width: 75%;
+  /* Cột phải chiếm 3/4 */
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  border-radius: 0.25rem;
+}
+
+.scroll-container::-webkit-scrollbar {
+  width: 8px;
+  /* Chiều rộng của thanh scroll */
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  /* Màu của phần kéo thanh scroll */
+  border-radius: 4px;
+  /* Bo góc phần kéo */
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  /* Màu của phần kéo khi hover */
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+  /* Màu nền của track thanh scroll */
+}
+
+
+.scroll-container::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #524f4f;
+  border-radius: 2px;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #FFD875 #2d2d2d;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #FFD875;
+  border-radius: 3px;
+}
+
+.toastProgress {
+  background: #FFD875 !important;
+}
+
+.Toastify__close-button{
+  color: #FFD875 !important;
+}
+
+.Toastify__toast-button{
+  color: #f7cc5f !important;
+}

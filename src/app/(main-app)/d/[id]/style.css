@@ -1,0 +1,130 @@
+/* styles.css */
+
+.div-styled-content {
+  display: flex;
+  gap: 0 10px;
+}
+
+@media (max-width: 768px) {
+  .div-styled-content {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .div-styled-content {
+    display: flex;
+  }
+}
+
+
+.div-styled-content-text {
+  font-size: 13px;
+}
+
+@media (min-width: 1024px) {
+  .div-styled-content-text {
+    font-size: 15px;
+  }
+}
+
+.div-container {
+  padding: 5px;
+}
+
+@media (min-width: 1024px) {
+  .div-container {
+    padding: 15px;
+  }
+}
+
+.movie {
+  padding-bottom: 62%;
+}
+
+@media (min-width: 768px) {
+  .movie {
+    padding-bottom: 52%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movie {
+    padding-bottom: 50%;
+  }
+}
+
+/* Sidebar */
+.movie-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Movie Details Card */
+.movie-details-card {
+  background: rgba(26, 26, 31, 0.8);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: white;
+  gap: 0.5rem;
+}
+
+.sidebar-title-icon {
+  color: #ffd875;
+  font-size: 1rem;
+}
+
+.movie-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.movie-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.movie-detail-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.detail-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #a0a0a0;
+  font-size: 0.875rem;
+}
+
+.detail-icon {
+  color: #ffd875;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+.detail-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+}
+
+.detail-value.highlight {
+  color: #ffd875;
+  font-weight: 600;
+}
